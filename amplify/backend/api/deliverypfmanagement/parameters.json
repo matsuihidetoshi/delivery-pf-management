@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "deliverypfmanagement",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authdeliverypfmanagementc1b48b3e",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

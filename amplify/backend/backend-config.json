@@ -1,1 +1,33 @@
-{}
+{
+	"auth": {
+		"deliverypfmanagementc1b48b3e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"api": {
+		"deliverypfmanagement": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authdeliverypfmanagementc1b48b3e"
+						}
+					}
+				}
+			}
+		}
+	},
+	"storage": {
+		"s3bbaa8550": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
